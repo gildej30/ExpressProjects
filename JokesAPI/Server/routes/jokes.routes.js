@@ -6,5 +6,4 @@ module.exports = (app) => {
     app.post("/api/joke/create", JokeController.create)
     app.put("/api/joke/update/:id", JokeController.update)
     app.delete("/api/joke/destroy/:id", JokeController.destroy)
-
 }

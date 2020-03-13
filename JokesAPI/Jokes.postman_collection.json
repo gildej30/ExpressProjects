@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "7f947af3-8996-4014-9957-d3b756e56043",
+		"name": "Jokes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all jokes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/jokes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"jokes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show joke",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/joke/5e6bb8e8ae960040640935fd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"joke",
+						"5e6bb8e8ae960040640935fd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create joke",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"setup\": \"How many catholics do I know?\",\r\n    \"punchline\": \"nun that I can think of.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/joke/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"joke",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete joke",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/joke/destroy/5e6bbaa8ae96004064093600",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"joke",
+						"destroy",
+						"5e6bbaa8ae96004064093600"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update joke",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"5e6bb7376b46173828224cc1\",\r\n    \"setup\": \"Did I update this joke?.\",\r\n    \"punchline\": \"and here is the punchline.\",\r\n    \"createdAt\": \"2020-03-13T16:39:19.791Z\",\r\n    \"updatedAt\": \"2020-03-13T16:39:19.791Z\",\r\n    \"__v\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/joke/update/5e6bb7376b46173828224cc1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"joke",
+						"update",
+						"5e6bb7376b46173828224cc1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

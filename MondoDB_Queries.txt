@@ -1,0 +1,21 @@
+use my_first_database
+
+db.createCollection("students")
+
+db.students.insert({name: Jason, home_state: Alabama, lucky_number: 1, birthday: {month: 12, day: 11, year: 1999}})
+db.students.insert({name: Jesse, home_state: Alaska, lucky_number: 2, birthday: {month: 11, day: 22, year: 2004}})
+db.students.insert({name: Troy, home_state: Arizona, lucky_number: 3, birthday: {month: 10, day: 30, year: 1985}})
+db.students.insert({name: Olivia, home_state: Arkansas, lucky_number: 4, birthday: {month: 09, day: 04, year: 1988}})
+db.students.insert({name: Jerry, home_state: California, lucky_number: 5, birthday: {month: 08, day: 15, year: 2009}})
+
+db.students.find()
+
+db.students.find({home_state: "California"})
+
+db.students.find({lucky_number: {$gt:3}}).pretty()
+
+db.students.find({lucky_number: {$lte:10}}).pretty()
+
+db.students.find({lucky_number: {$gt:1 , $lt:9}}).pretty()
+
+db.students.updateMany({}, {$set:{interest: ['coding', 'brunch', 'MongoDB']}})
